@@ -6,3 +6,7 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/
+  - title: "Daily Life"
+    url: /categories/Daily Life/
+  - title: "Computer Network"
+    url: /categories/Computer Network/
