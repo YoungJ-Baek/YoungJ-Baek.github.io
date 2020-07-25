@@ -3,9 +3,6 @@ title: "First post in my base camp"
 date: 2020-07-24 18:13:00 -0400
 categories: ['Daily Life']
 tags: ['Blog', 'jekyll', 'github', 'gitpage', 'github.io']
-sidebar:
-  title: "Daily Life"
-  nav: sidebar
 ---
 
 ## Start YoungJ-Baek's underground
