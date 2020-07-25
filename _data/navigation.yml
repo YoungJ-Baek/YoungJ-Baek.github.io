@@ -13,4 +13,6 @@ sidebar:
     children:
       - title: "Blog"
         url: /categories/Daily Life/
+      - title: "Process"
+        url: /categories/Process/
         
