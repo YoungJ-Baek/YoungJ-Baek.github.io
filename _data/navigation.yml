@@ -12,7 +12,7 @@ main:
     url: /categories/Computer Network/
 
 # sidebar links
-docs:
+sidebar:
   - title: Daily Life
     children:
       - title: "Blog"
