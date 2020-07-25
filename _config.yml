@@ -296,5 +296,4 @@ defaults:
       type: sidebar
     values:
       sidebar:
-        title: "Menu"
         nav: "sidebar"
