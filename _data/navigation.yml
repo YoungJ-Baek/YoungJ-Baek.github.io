@@ -10,3 +10,11 @@ main:
     url: /categories/Daily Life/
   - title: "Computer Network"
     url: /categories/Computer Network/
+
+# sidebar links
+docs:
+  - title: Daily Life
+    children:
+      - title: "Blog"
+        url: /categories/Daily Life/
+        
