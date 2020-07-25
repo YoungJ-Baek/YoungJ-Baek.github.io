@@ -290,10 +290,11 @@ defaults:
       comments: false
       share: true
       related: false
-  # _docs
+  # _sidebar
   - scope:
       path: ""
-      type: docs
+      type: sidebar
     values:
       sidebar:
-        nav: "docs"
+        title: "Menu"
+        nav: "sidebar"
