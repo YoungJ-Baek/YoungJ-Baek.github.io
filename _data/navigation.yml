@@ -13,6 +13,27 @@ sidebar:
     children:
       - title: "Blog"
         url: /categories/Daily Life/
-      - title: "Process"
-        url: /categories/Process/
-        
+      - title: "Cooking"
+        url: /categories/Cooking/
+  - title: Electric Engineering
+    children:
+      - title: "Machine Learning"
+        url: /categories/Machine Learning/
+      - title: "Computer Network"
+        url: /categories/Computer Network/
+      - title: "Image Processing"
+        url: /categories/Image Processing/
+  - title: Projects
+    children:
+      - title: "Robot Arm Placing"
+        url: /categories/Robot Arm Placing"
+      - title: "My Contents Management"
+        url: /categories/My Contents Management/
+      - title: "Imbeded Programming"
+        url: /categories/Imbeded Programming/
+  - title: Coding Test
+    children:
+      - title: "Baekjoon"
+        url: /categories/Baekjoon/
+      - title: "Programmers"
+        url: /categories/Programmers/
