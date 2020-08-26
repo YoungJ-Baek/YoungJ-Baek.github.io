@@ -7,3 +7,4 @@ taxonomy: Image Processing
 ---
 
 Summary of image processing and C++ codes of theorems.
+Examples of using opencv library and other libraries by Python.
