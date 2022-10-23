@@ -38,6 +38,15 @@ side:
     children:
       - title: "Network"
         url: /categories/CS_Network/
+      - title: "Linux"
+        url: /categories/CS_Linux/
+  - title: Blog
+    url: /categories/Blog/
+    children:
+      - title: "Daily"
+        url: /categories/Blog_Daily/
+      - title: "Tips"
+        url: /categories/Blog_Tips/
 
   # - title: "Sample Posts"
   #   url: /year-archive/
