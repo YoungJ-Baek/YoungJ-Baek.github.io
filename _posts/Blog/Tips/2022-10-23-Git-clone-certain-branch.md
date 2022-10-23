@@ -10,6 +10,7 @@ comments: true
 ---
 This post is written by [YoungJ-Baek](https://github.com/YoungJ-Baek)
 {: .notice--info}
+
 You can find more posts about `Git` easily by searching the `Git` tag.
 {: .notice--warning}
 
