@@ -10,14 +10,34 @@ main:
     url: /tags/
 
 side:
-  - title: ARNAVI
+  - title: C++
+    url: /categories/Cpp/
     children:
-      - title: "Path Planning"
-        url: /categories/Path_Planning/
-      - title: "LDSO code review"
-        url: /categories/LDSO_code_review/
-  - title: Siwi Alimi
-    url: /categories/SiwiAlimi/
+      - title: "Article"
+        url: /categories/Cpp_Article/
+      - title: "Tips"
+        url: /categories/Cpp_Tips/
+  - title: Python
+    url: /categories/Python/
+    children:
+      - title: "Article"
+        url: /categories/Python_Article/
+      - title: "Tips"
+        url: /categories/Python_Tips/
+  - title: Computer Vision
+    url: /categories/Computer_Vision/
+    children:
+      - title: "Optical Flow"
+        url: /categories/CV_Optical_Flow/
+      - title: "SLAM"
+        url: /categories/CV_SLAM/
+      - title: "Algorithms"
+        url: /categories/CV_Algorithms/
+  - title: Computer Science
+    url: /categories/Computer_Science/
+    children:
+      - title: "Network"
+        url: /categories/CS_Network/
 
   # - title: "Sample Posts"
   #   url: /year-archive/
