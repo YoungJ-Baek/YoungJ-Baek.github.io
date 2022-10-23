@@ -1,7 +1,7 @@
 ---
 title: "[Git] Cloning certain branch"
 categories:
-    - Blog
+    - Blog_Tips
 tags:
     - Git
 toc : true

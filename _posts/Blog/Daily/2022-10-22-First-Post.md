@@ -1,7 +1,7 @@
 ---
 title: "Thread Through"
 categories:
-    - Daily
+    - Blog_Daily
 tags:
     - Blog
 toc : true
