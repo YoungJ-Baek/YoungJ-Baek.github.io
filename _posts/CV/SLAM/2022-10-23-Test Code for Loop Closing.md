@@ -102,14 +102,14 @@ Then, our next step is to make frames including multiple pyramids via conversion
     camera->CreateCH(camera)
 
     // Create Frame Hessian
-shared_ptr<Frame> frame(new Frame(img->timestamp));
-frame->CreateFH(frame);
-shared_ptr<FrameHessian> frame_hessian = frame->frameHessian;
+    shared_ptr<Frame> frame(new Frame(img->timestamp));
+    frame->CreateFH(frame);
+    shared_ptr<FrameHessian> frame_hessian = frame->frameHessian;
 
-// Convert Image to Frame with Generating Image Pyramids
-frame_hessian->ab_exposure = img->exposure_time;
-frame_hessian->makeImages(img->image, camera->mpCH);
-std::cout << "frame created\n";
+    // Convert Image to Frame with Generating Image Pyramids
+    frame_hessian->ab_exposure = img->exposure_time;
+    frame_hessian->makeImages(img->image, camera->mpCH);
+    std::cout << "frame created\n";
 ```
 </div>
 
