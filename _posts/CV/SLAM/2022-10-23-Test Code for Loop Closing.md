@@ -64,8 +64,8 @@ void Frame::ComputeBoW(shared_ptr<ORBVocabulary> voc) {
     // Load DboW database
     DBoW3::Database database_bow;
     database_bow.load(argv[4]);
-    std::cout << "database loaded\n;
-
+    std::cout << "database loaded\n";
+    
     // Initialize Query for Loop Closing Candidate
     DBoW3::QueryResults results;
     DBoW3::Result result;
