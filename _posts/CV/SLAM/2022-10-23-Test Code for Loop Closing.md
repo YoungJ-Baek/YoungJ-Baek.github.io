@@ -113,11 +113,29 @@ Then, our next step is to make frames including multiple pyramids via conversion
 ```
 </div>
 
-### 3.5. Select Feature (Pixel Selection)
+### 3.5. Calculate BoW via Feature Detection
+In LDSO, there are two ways to select pixels. Following `PixelSelector`, both corners and non-corners are selected to decide whether the frame is key frame or not. On the other hand, corners are picked to calculate bag-of-words of each key frames. So, calculation of bag-of-words can be described with two parts, corner detection and bag-of-words calculation.
 
+<div class="notice--primary" markdown="1">
+`Calculate BoW`
+```cpp
+    // Corner Detection
+	FeatureDetector detector;
+	frame->features.reserve(setting_desiredImmatureDensity);
+	detector.DetectCorners(setting_desiredImmatureDensity, frame);
+	
+    // BoW Calculation
+	for(auto &feature: frame_hessian->frame->features){
+		feature->ip = shared_ptr<ImmaturePoint>(new ImmaturePoint(frame_hessian->frame, feature, 1, camera->mpCH));
+	}
+	frame->ComputeBoW(orb3_vocabulary);
+```
+</div>
+
+As a result, `bowVec` of `frame` structure is updated with calculated bag-of-words. Also, `featVec` of the structure is updated with new features.
 
 ### 3.6. Detect Loop Closing via BoW
-first goal
+(TBD)
 
 ### 3.7. Correction
-if needed
+(TBD)
