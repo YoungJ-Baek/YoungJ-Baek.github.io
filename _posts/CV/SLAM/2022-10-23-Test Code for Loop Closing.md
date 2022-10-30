@@ -29,10 +29,10 @@ To trigger loop closing, we need 4 things. We set these four parameters as argum
 In KITTI example of LDSO, we can find vocabulary loader part. LDSO uses ORB vocabulary, so we will use it as well.
 
 ```cpp
-    // Load Vocabulary
-    shared_ptr<ORBVocabulary> orb3_vocabulary(new ORBVocabulary());
-    orb3_vocabulary->load(argv[3]);
-    std::cout << "vocabulary loaded\n";
+// Load Vocabulary
+shared_ptr<ORBVocabulary> orb3_vocabulary(new ORBVocabulary());
+orb3_vocabulary->load(argv[3]);
+std::cout << "vocabulary loaded\n";
 ```
 
 ### 3.2. Load DBoW Database
@@ -80,11 +80,11 @@ void Frame::ComputeBoW(shared_ptr<ORBVocabulary> voc) {
 Next, we should load an input image to detect loop closing. Easily, we can load an image with OpenCV or using other methods. However, in LDSO, we should load an image with `ImageFolderLoader`. Also, there is one more condition to detect loop closing. We should pick a non key frame which is close to the loop. Note that we use `ImageAndExposure` class for single frame. More details about image loader is on this [post](). (TBD)
 
 ```cpp
-	// Load Input Image
-	shared_ptr<ImageFolderReader> reader(new ImageFolderReader(ImageFolderReader::KITTI, argv[1], argv[2],"",""));
-    reader->setGlobalCalibration()
-	shared_ptr<ImageAndExposure> img(reader->getImage(0));
-	std::cout << "reader set done\n";
+// Load Input Image
+shared_ptr<ImageFolderReader> reader(new ImageFolderReader(ImageFolderReader::KITTI, argv[1], argv[2],"",""));
+reader->setGlobalCalibration()
+shared_ptr<ImageAndExposure> img(reader->getImage(0));
+std::cout << "reader set done\n";
 ```
 
 ### 3.4. Convert Image to Frame
