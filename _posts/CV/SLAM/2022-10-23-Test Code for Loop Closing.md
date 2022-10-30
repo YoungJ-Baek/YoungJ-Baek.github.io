@@ -14,7 +14,7 @@ This post is written by [YoungJ-Baek](https://github.com/YoungJ-Baek)
 {: .notice--info}
 
 ## 1. Goal
-The goal of this post is to develop test code for loop closing of LDSO. So, we prepare pre-generated PCL map, DBoW, and pose binary files. To see how to generate those things, look at this [post]() (TBD). We divide this process into 7 steps. Let's take a look for each steps.
+The goal of this post is to develop test code for loop closing of LDSO. We decided it to check the feasibility of localization and loop closing of our application. You can see more details about our meeting minutes in [here](https://v-slammers.github.io/minutes_arnavi/meeting-minutes/). We already have prepared pre-generated PCL map, DBoW, and pose binary files. To see how to generate those things, look at this [post]() (TBD). We divide this process into 7 steps. Let's take a look for each steps.
 
 ## 2. Argument
 To trigger loop closing, we need 4 things. We set these four parameters as arguments. You can find more details as followed. Listing order is same with argument order.
