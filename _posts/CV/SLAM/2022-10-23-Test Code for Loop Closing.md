@@ -29,13 +29,53 @@ To trigger loop closing, we need 4 things. We set these four parameters as argum
 In KITTI example of LDSO, we can find vocabulary loader part. LDSO uses ORB vocabulary, so we will use it as well.
 
 ```cpp
-    // Load Vocabulary
-	shared_ptr<ORBVocabulary> orb3_vocabulary(new ORBVocabulary());
-	orb3_vocabulary->load(argv[3]);
-	std::cout << "vocabulary loaded\n";
+// Load Vocabulary
+shared_ptr<ORBVocabulary> orb3_vocabulary(new ORBVocabulary());
+orb3_vocabulary->load(argv[3]);
+std::cout << "vocabulary loaded\n";
 ```
 
 ### 3.2. Load DBoW Database
+After loading ORB vocabulary, we need to load pre-generated DBoW database. It was resulted from map generation. So, it has all the information about bag-of-words of map. In LDSO, bag-of-words of key frames is added to database at loop closing thread. However, since we already have pre-generated database, we don't need addition. Instead, all we need to do is load the database and detect loop closing via bag-of-words. In this chapter, the post describes how to load database.
+
+Also, you can find bag-of-words structure in `Frame` data structure in LDSO. In this structure, there's a function named `ComputeBoW` to compute bag-of-words of a single frame. So, we have to initialize this structure as well.
+
+<div class="notice--primary" markdown="1">
+`ComputeBoW`
+```cpp
+void Frame::ComputeBoW(shared_ptr<ORBVocabulary> voc) {
+    // convert corners into BoW
+    vector<cv::Mat> allDesp;
+    for (size_t i = 0; i < features.size(); i++) {
+        auto &feat = features[i];
+        if (feat->isCorner) {
+            cv::Mat m(1, 32, CV_8U);
+            for (int k = 0; k < 32; k++)
+                m.data[k] = feat->descriptor[k];
+            allDesp.push_back(m);
+            bowIdx.push_back(i);
+        }
+    }
+    voc->transform(allDesp, bowVec, featVec, 4);
+}
+```
+`Load DBoW Database`
+```cpp
+    // Load DboW database
+    DBoW3::Database database_bow;
+    database_bow.load(argv[4]);
+    std::cout << "database loaded\n;
+
+    // Initialize Query for Loop Closing Candidate
+    DBoW3::QueryResults results;
+    DBoW3::Result result;
+
+    // Initialize BoW Structure for Input Frame
+    DBoW3::BowVecture frame_bow;
+    DBoW3::FeatureVector frame_feature;
+```
+</div>
+
 ### 3.3. Load Input Image
 1. should be non key frame close to the loop
 2. should use Image Folder Loader
