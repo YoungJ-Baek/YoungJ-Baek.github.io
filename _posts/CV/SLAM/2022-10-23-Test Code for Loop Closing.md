@@ -120,15 +120,15 @@ In LDSO, there are two ways to select pixels. Following `PixelSelector`, both co
 `Calculate BoW`
 ```cpp
     // Corner Detection
-	FeatureDetector detector;
-	frame->features.reserve(setting_desiredImmatureDensity);
-	detector.DetectCorners(setting_desiredImmatureDensity, frame);
+FeatureDetector detector;
+frame->features.reserve(setting_desiredImmatureDensity);
+detector.DetectCorners(setting_desiredImmatureDensity, frame);
 	
     // BoW Calculation
-	for(auto &feature: frame_hessian->frame->features){
-		feature->ip = shared_ptr<ImmaturePoint>(new ImmaturePoint(frame_hessian->frame, feature, 1, camera->mpCH));
-	}
-	frame->ComputeBoW(orb3_vocabulary);
+for(auto &feature: frame_hessian->frame->features){
+    feature->ip = shared_ptr<ImmaturePoint>(new ImmaturePoint(frame_hessian->frame, feature, 1, camera->mpCH));
+}
+frame->ComputeBoW(orb3_vocabulary);
 ```
 </div>
 
