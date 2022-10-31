@@ -10,7 +10,7 @@ toc : true
 toc_sticky: true
 comments: true
 ---
-This post is written by [YoungJ-Baek](https://github.com/YoungJ-Baek)
+This post is written by [YoungJ-Baek](https://github.com/YoungJ-Baek "@embed")
 {: .notice--info}
 
 ## 1. Goal
