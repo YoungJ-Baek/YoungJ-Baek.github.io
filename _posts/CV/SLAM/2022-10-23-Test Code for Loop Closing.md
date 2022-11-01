@@ -141,6 +141,7 @@ In DBoW3, there is a function, `query`. We will use this function to detect loop
 `Detecting Loop Closing via BoW`
 ```cpp
     keyframe_database->query(frame->bowVec, results, 1);
+    
 	if(results.empty()){
 		std::cout << "no loop found\n";
 		exit(1);
