@@ -29,12 +29,14 @@ To trigger loop closing, we need 4 things. We set these four parameters as argum
 In KITTI example of LDSO, we can find vocabulary loader part. LDSO uses ORB vocabulary, so we will use it as well.
 
 <div class="notice--primary" markdown="1">
+
 `Load ORB Vocabulary`
 ```cpp
     shared_ptr<ORBVocabulary> orb3_vocabulary(new ORBVocabulary());
     orb3_vocabulary->load(argv[3]);
     std::cout << "vocabulary loaded\n";
 ```
+
 </div>
 
 ### 3.2. Load DBoW Database
@@ -43,6 +45,7 @@ After loading ORB vocabulary, we need to load pre-generated DBoW database. It wa
 Also, you can find bag-of-words structure in `Frame` data structure in LDSO. In this structure, there's a function named `ComputeBoW` to compute bag-of-words of a single frame. So, we have to initialize this structure as well.
 
 <div class="notice--primary" markdown="1">
+
 `ComputeBoW`
 ```cpp
 void Frame::ComputeBoW(shared_ptr<ORBVocabulary> voc) {
@@ -76,12 +79,14 @@ void Frame::ComputeBoW(shared_ptr<ORBVocabulary> voc) {
     DBoW3::BowVecture frame_bow;
     DBoW3::FeatureVector frame_feature;
 ```
+
 </div>
 
 ### 3.3. Load Input Image
 Next, we should load an input image to detect loop closing. Easily, we can load an image with OpenCV or using other methods. However, in LDSO, we should load an image with `ImageFolderLoader`. Also, there is one more condition to detect loop closing. We should pick a non key frame which is close to the loop. Note that we use `ImageAndExposure` class for single frame. More details about image loader is on this [post](). (TBD)
 
 <div class="notice--primary" markdown="1">
+
 `Load Input Image`
 ```cpp
     shared_ptr<ImageFolderReader> reader(new ImageFolderReader(ImageFolderReader::KITTI, argv[1], argv[2],"",""));
@@ -89,12 +94,14 @@ Next, we should load an input image to detect loop closing. Easily, we can load 
     shared_ptr<ImageAndExposure> img(reader->getImage(0));
     std::cout << "reader set done\n";
 ```
+
 </div>
 
 ### 3.4. Convert Image to Frame
 Then, our next step is to make frames including multiple pyramids via conversion from the input image. In LDSO, this function is implemented at `addActiveFrame` in `FullSystem`. During the conversion, two Hessian are generated, `Frame Hessian` and `Calibration Hessian`. Note that all the camera intrinsic parameters were initialized at `setGlobalCalibration` function.
 
 <div class="notice--primary" markdown="1">
+
 `Convert Image to Frame`
 ```cpp
     // Create Calibration Hessian
@@ -111,12 +118,14 @@ Then, our next step is to make frames including multiple pyramids via conversion
     frame_hessian->makeImages(img->image, camera->mpCH);
     std::cout << "frame created\n";
 ```
+
 </div>
 
 ### 3.5. Calculate BoW via Feature Detection
 In LDSO, there are two ways to select pixels. Following `PixelSelector`, both corners and non-corners are selected to decide whether the frame is key frame or not. On the other hand, corners are picked to calculate bag-of-words of each key frames. So, calculation of bag-of-words can be described with two parts, corner detection and bag-of-words calculation.
 
 <div class="notice--primary" markdown="1">
+
 `Calculate BoW`
 ```cpp
     // Corner Detection
@@ -130,6 +139,7 @@ In LDSO, there are two ways to select pixels. Following `PixelSelector`, both co
     }
     frame->ComputeBoW(orb3_vocabulary);
 ```
+
 </div>
 
 As a result, `bowVec` of `frame` structure is updated with calculated bag-of-words. Also, `featVec` of the structure is updated with new features.
@@ -138,10 +148,11 @@ As a result, `bowVec` of `frame` structure is updated with calculated bag-of-wor
 In DBoW3, there is a function, `query`. We will use this function to detect loop closing using BoW.
 
 <div class="notice--primary" markdown="1">
+
 `Detecting Loop Closing via BoW`
 ```cpp
     keyframe_database->query(frame->bowVec, results, 1);
-    
+
 	if(results.empty()){
 		std::cout << "no loop found\n";
 		exit(1);
@@ -149,6 +160,7 @@ In DBoW3, there is a function, `query`. We will use this function to detect loop
 	DBoW3::Result r = results[0];
 	std::cout << r.Id << "\n";
 ```
+
 </div>
 
 ### 3.7. Correction
