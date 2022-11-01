@@ -17,6 +17,7 @@ This post is written referring to the [official documentation](https://doc.rust-
 ## 1. Preface
 Today, I will introduce how to install `Rust` in your Macbook. Recently, I have been interested in `Rust`, so I install it in my M1 Macbook Pro 14`. This post covers only how to install it with MacOS. Therefore, if you want to install it with Windows or Linux, please refer the official document at the top of this post.
 
+
 ## 2. Installation
 ### 2.1. Install rustup tool
 First, open your terminal, and then type the command below. It will install `rustup` tool, which installs the latest stable version of `Rust`.
@@ -43,6 +44,7 @@ $ xcode-select --install
 
 </div>
 
+
 ### 2.2. Add Path
 Second, reload the terminal to add the path where `Rust` is installed to your `PATH`. If you do not want to reload it, you should add it manually.
 
@@ -67,6 +69,7 @@ rustc 1.64.0 (a55dd71d5 2022-09-19)
 
 </div>
 
+
 ### 2.3. Update and Uninstall
 Third, if you want to update your `Rust` to the latest version, type the first command below. Otherwise, if you want to uninstall, use the second one.
 
@@ -83,6 +86,7 @@ $ rustup self uninstall
 ```
 
 </div>
+
 
 ### 2.4. Troubleshooting
 This is the end of `Rust` installation. If you have faced any problem, you'd better to find the official document, especially [installation part](https://doc.rust-lang.org/book/ch01-01-installation.html).
