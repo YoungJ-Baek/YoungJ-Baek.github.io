@@ -135,7 +135,20 @@ In LDSO, there are two ways to select pixels. Following `PixelSelector`, both co
 As a result, `bowVec` of `frame` structure is updated with calculated bag-of-words. Also, `featVec` of the structure is updated with new features.
 
 ### 3.6. Detect Loop Closing via BoW
-(TBD)
+In DBoW3, there is a function, `query`. We will use this function to detect loop closing using BoW.
+
+<div class="notice--primary" markdown="1">
+`Detecting Loop Closing via BoW`
+```cpp
+    keyframe_database->query(frame->bowVec, results, 1);
+	if(results.empty()){
+		std::cout << "no loop found\n";
+		exit(1);
+	}
+	DBoW3::Result r = results[0];
+	std::cout << r.Id << "\n";
+```
+</div>
 
 ### 3.7. Correction
 (TBD)
