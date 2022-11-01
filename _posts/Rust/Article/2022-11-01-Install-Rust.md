@@ -61,7 +61,7 @@ Then, check the version of `Rust` to see whether it has been installed well. In 
 
 <div class="notice--primary" markdown="1">
 
-`Add PATH manually`
+`Check version`
 ```bash
 youngjin@youngjinui-MacBookPro ~ % rustc --version
 rustc 1.64.0 (a55dd71d5 2022-09-19)
