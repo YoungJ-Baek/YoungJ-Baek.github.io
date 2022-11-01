@@ -3,7 +3,7 @@ title: "About SLAM"
 permalink: /categories/CV_SLAM/
 layout: category
 author_profile: true
-taxonomy: SLAM
+taxonomy: CV_SLAM
 toc: true
 comments: true
 toc_sticky: true

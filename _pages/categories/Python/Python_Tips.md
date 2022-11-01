@@ -3,7 +3,7 @@ title: "About Python"
 permalink: /categories/Python_Tips/
 layout: category
 author_profile: true
-taxonomy: Tips
+taxonomy: Python_Tips
 toc: true
 comments: true
 toc_sticky: true

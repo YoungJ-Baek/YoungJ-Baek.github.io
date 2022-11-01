@@ -3,7 +3,7 @@ title: "About Linux"
 permalink: /categories/CS_Linux/
 layout: category
 author_profile: true
-taxonomy: Linux
+taxonomy: CS_Linux
 toc: true
 comments: true
 toc_sticky: true

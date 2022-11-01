@@ -3,7 +3,7 @@ title: "About Rust"
 permalink: /categories/Rust_Tips/
 layout: category
 author_profile: true
-taxonomy: Tips
+taxonomy: Rust_Tips
 toc: true
 comments: true
 toc_sticky: true

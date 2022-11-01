@@ -3,7 +3,7 @@ title: "About C++"
 permalink: /categories/Cpp_Article/
 layout: category
 author_profile: true
-taxonomy: Article
+taxonomy: Cpp_Article
 toc: true
 comments: true
 toc_sticky: true

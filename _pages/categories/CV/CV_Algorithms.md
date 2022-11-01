@@ -3,7 +3,7 @@ title: "About Computer Vision Algorithms"
 permalink: /categories/CV_Algorithms/
 layout: category
 author_profile: true
-taxonomy: Algorithms
+taxonomy: CV_Algorithms
 toc: true
 comments: true
 toc_sticky: true

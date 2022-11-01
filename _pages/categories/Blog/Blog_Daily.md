@@ -3,7 +3,7 @@ title: "Daily Blog"
 permalink: /categories/Blog_Daily/
 layout: category
 author_profile: true
-taxonomy: Daily
+taxonomy: Blog_Daily
 toc: true
 comments: true
 toc_sticky: true

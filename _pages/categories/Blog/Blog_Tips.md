@@ -3,7 +3,7 @@ title: "Blog Tips"
 permalink: /categories/Blog_Tips/
 layout: category
 author_profile: true
-taxonomy: Tips
+taxonomy: Blog_Tips
 toc: true
 comments: true
 toc_sticky: true

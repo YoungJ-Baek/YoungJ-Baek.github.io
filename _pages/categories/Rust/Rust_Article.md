@@ -3,7 +3,7 @@ title: "About Rust"
 permalink: /categories/Rust_Article/
 layout: category
 author_profile: true
-taxonomy: Article
+taxonomy: Rust_Article
 toc: true
 comments: true
 toc_sticky: true
