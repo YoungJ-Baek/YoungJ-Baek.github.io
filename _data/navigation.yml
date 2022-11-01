@@ -24,6 +24,13 @@ side:
         url: /categories/Python_Article/
       - title: "Tips"
         url: /categories/Python_Tips/
+  - title: Rust
+    url: /categories/Rust/
+    children:
+      - title: "Article"
+        url: /categories/Rust_Article/
+      - title: "Tips"
+        url: /categories/Rust_Tips/
   - title: Computer Vision
     url: /categories/Computer_Vision/
     children:
