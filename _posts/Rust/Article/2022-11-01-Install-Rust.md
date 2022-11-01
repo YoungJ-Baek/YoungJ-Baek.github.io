@@ -1,9 +1,9 @@
 ---
 title: "[Rust] Install Rust"
 categories:
-    - Blog_Tips
+    - Rust_Article
 tags:
-    - Git
+    - Rust
 toc : true
 toc_sticky: true
 comments: true
