@@ -153,12 +153,12 @@ In DBoW3, there is a function, `query`. We will use this function to detect loop
 ```cpp
     keyframe_database->query(frame->bowVec, results, 1);
 
-	if(results.empty()){
-		std::cout << "no loop found\n";
-		exit(1);
-	}
-	DBoW3::Result r = results[0];
-	std::cout << r.Id << "\n";
+if(results.empty()){
+    std::cout << "no loop found\n";
+    exit(1);
+}
+DBoW3::Result r = results[0];
+std::cout << r.Id << "\n";
 ```
 
 </div>
