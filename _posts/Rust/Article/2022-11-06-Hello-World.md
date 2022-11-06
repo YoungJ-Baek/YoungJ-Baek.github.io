@@ -35,6 +35,8 @@ $ mkdir hello_world
 $ cd hello_world
 ```
 
+</div>
+
 
 ### 2.2. Create Main file
 Second, create main file in the directory. If you have learned `C/C++` or `Python` before, it is same with `main.c/main.cpp` or `main.py`. `Rust` uses `.rs` as an extention. After you have generated the file, type the code below.
