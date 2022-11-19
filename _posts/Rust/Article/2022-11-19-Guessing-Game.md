@@ -126,4 +126,16 @@ Next, we create a variable named `guess` via using `let` statement. In this poin
 
 `io::stdin()` is standard input library. In the library, you can find `read_line()` function. It takes whatever the user types and convert it into a string. So, we need to use string as an argument. Also, it should be mutable so that the method can modify the value. Moreover, the function requires `&` syntax as an argument. It is very similar to `C++`'s reference syntax. However, more details about it will be described later.
 
-### 4.2.
+### 4.2. Generate Random Number
+
+To generate random number, we add `use rand::Rng;` syntax. Remember that we have already add `rand` crate in our `Cargo.toml`. Now, we can use all the functions in `rand` crate. So, we call `thread_rng()` to generate random number. `get_range(start..=end)` decides the random number generating rule, generating via lower and upper range. So, now we can generate a random number in the range of 1 ~ 100.
+
+### 4.3. Compare 2 Numbers
+
+To compare two numbers, we should add `use std::cmp::Ordering;` syntax. `Ordering` function compares two numbers and returns the status of the result, `Less`, `Greater`, and `Equal`. If we use `C++` or other languages, we should use `if` statement to print different answers depending on the conditions. Instead, we can use `match` statement to define the operations depending on the return value. More details about `match` will be posted later.
+
+## 5. Note
+
+In the code, there are two variables named `guess`. In most of programming language, it is abandoned to use define multiple variables with same name. However, `Rust` says it is okay. It is very interesting point, and we will talk about it later in a deep dive.
+
+Also, `mut` and `reference` are very interesting, too. Especially, `mut` is something very new to me. We will talk about it at the very next post.
