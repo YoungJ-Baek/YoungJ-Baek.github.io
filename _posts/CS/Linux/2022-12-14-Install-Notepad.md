@@ -1,7 +1,7 @@
 ---
 title: "[Ubuntu] Install Notepad++"
 categories:
-  - Blog_Tips
+  - CS_Linux
 tags:
   - Ubuntu
   - Linux
