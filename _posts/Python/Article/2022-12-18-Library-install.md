@@ -51,3 +51,9 @@ $ pip3 install pillow
 ```bash
 $ pip3 install image
 ```
+
+- autopep8
+
+```bash
+$ pip3 install autopep8
+```
