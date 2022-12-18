@@ -3,8 +3,7 @@ title: "[Error/MacOS] ImportError: Library not loaded"
 categories:
   - Python_Tips
 tags:
-  - Ubuntu
-  - Linux
+  - Python
   - Error
 toc: true
 toc_sticky: true
