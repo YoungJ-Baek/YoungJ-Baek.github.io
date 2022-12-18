@@ -20,8 +20,6 @@ The goal of this post is to develop test code for loop closing of LDSO. We decid
 
 ## 2. Argument
 
-./dbow_test /dataset /calibration /vocab /db > result.txt
-
 To trigger loop closing, we need 4 things. We set these four parameters as arguments. You can find more details as followed. Listing order is same with argument order.
 
 1. Source: Input image
@@ -31,7 +29,7 @@ To trigger loop closing, we need 4 things. We set these four parameters as argum
 
 Also, we want the `preset` option off. So, we make a simple function using the original code of LDSO.
 
-<div class="notiece--primary" markdown="1">
+<div class="notice--primary" markdown="1">
 
 `settingsDefault function`
 
