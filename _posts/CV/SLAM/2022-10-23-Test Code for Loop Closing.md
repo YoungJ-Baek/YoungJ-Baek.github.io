@@ -231,7 +231,7 @@ In DBoW3, there is a function, `query`. We will use this function to detect loop
 
 ## 4. Experiment
 
-The test code in this post is assuming single input image. However, for the experiment, we wrap the sequence with `for` expression and make a result file via it. In conclusion, we get a result of `query` operation of every images. In the next post, we will show you the result of our experiment via visualizing the trajectory of output of `query` operation.
+The test code in this post is assuming single input image. However, for the experiment, we wrap the sequence with `for` expression and make a result file via it. In conclusion, we get a result of `query` operation of every images. In the next post, we will show you the result of our experiment via visualizing the trajectory of output of `query` operation. Also, you can see the full code used for our experiment in [here](https://github.com/V-SLAMMERS/LDSO/blob/jm/examples/dbow_test.cc)
 
 ## 5. Conclusion
 
