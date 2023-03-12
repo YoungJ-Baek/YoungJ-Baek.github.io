@@ -2,6 +2,12 @@
   <div class="sidebar sticky">
   {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
   {% if page.sidebar %}
+  <div style="text-align: center;">
+    <a href="https://hits.seeyoufarm.com">
+      <img 
+        src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fyoungj-baek.github.io&count_bg=%23000000&title_bg=%23000000&icon=openstreetmap.svg&icon_color=%23E7E7E7&title=Visitors&edge_flat=false"/>
+    </a>
+  </div>
     {% for s in page.sidebar %}
       {% if s.image %}
         <img src="{{ s.image | relative_url }}"
@@ -15,11 +21,5 @@
       {% include nav_list nav=page.sidebar.nav %}
     {% endif %}
   {% endif %}
-  <div style="text-align: center;">
-    <a href="https://hits.seeyoufarm.com">
-      <img 
-        src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fyoungj-baek.github.io&count_bg=%23000000&title_bg=%23000000&icon=openstreetmap.svg&icon_color=%23E7E7E7&title=Visitors&edge_flat=false"/>
-    </a>
-  </div>
   </div>
 {% endif %}
