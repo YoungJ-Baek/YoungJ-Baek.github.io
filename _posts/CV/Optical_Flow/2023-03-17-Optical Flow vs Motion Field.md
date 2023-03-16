@@ -34,21 +34,21 @@ Our friendly neighbor Wikipedia defines Motion Field as follows:
 In short, Motion Field is an ideal representation of 3D motion as it is projected onto a camera image in computer vision. It captures all the movements of objects. The following figure shows an ideal Motion Field.
 
 <p align="center">
-  <img src="/assets/images/posts/ideal_motion_field.png" alt>
+  <img src="/assets/images/posts/ideal_motion_field.png" width="100%" height="100%" alt>
   <em>Ideal Motion Field [Reference: Bahadir K. Gunturk, EE Image Analysis II]</em>
 </p>
 
 The terms "ideal" and "in practice" in the definition of the Motion Field on Wikipedia suggest that it is an idealized representation of 3D motion projected onto a camera image, and that while it can be formally defined, in practice it is often only possible to determine an approximation of the motion field from image data. In other words, it is impossible to accurately reproduce the motion field from 2D images or videos that we commonly encounter, unless using a holographic 3D point cloud.
 
 <p align="center">
-  <img src="/assets/images/posts/ideal_motion_field.png" alt>
+  <img src="/assets/images/posts/ideal_motion_field.png" width="100%" height="100%" alt>
   <em>comparison between ideal Motion Field(right) and Projected 3D Motion in real world(left)</em>
 </p>
 
 There are several reasons for this, but to put it simply, it is because of the difference in dimensions as shown in the figure 4. Actual motion occurs in 3D space. However, the images or videos that we need to obtain a motion field from are 2D data. As the dimensions are reduced, numerous vectors in 3D space are projected onto 2D space, causing overlapping as shown in the figure. As a result, a significant amount of information is lost and distortion occurs. It is already difficult to capture things as they are, and attempting to capture all motion is ambitious.
 
 <p align="center">
-  <img src="/assets/images/posts/motion_field_vs_optical_flow.png" alt>
+  <img src="/assets/images/posts/motion_field_vs_optical_flow.png" width="100%" height="100%" alt>
   <em>Motion Field vs Optical Flow [Reference: Franz, 2005; a) Motion of the sphere without grey value changing; b) Motion of the light source with grey value changing]</em>
 </p>
 
