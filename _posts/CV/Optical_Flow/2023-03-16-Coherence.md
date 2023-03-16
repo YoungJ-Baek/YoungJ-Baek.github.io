@@ -37,7 +37,10 @@ As mentioned earlier, all physical phenomena follow inertia, which can be expres
 
 When we look at a specific point in an image, there is a high probability that adjacent pixels also have similar values. Although the example may be a bit messy, if we look at the hand touching the mouse right now, we can find such consistency. Adjacent pixels of the skin color have a similar color. This consistency in the image is used in various fields, and the easiest field to encounter is Edge Detection. Areas where the difference between adjacent pixels is small are likely to be the same object, and areas where the difference is large are likely to be the boundary between objects. Figure 1 is a concept figure of image coherence.
 
-<p align="center"><img src="/assets/images/posts/image_coherence.jpeg"></p>
+<p align="center">
+  <img src="/assets/images/posts/image_coherence.jpeg" alt>
+  <em>Image Coherence</em>
+</p>
 
 ### Time Coherence
 
@@ -45,7 +48,10 @@ When we view an image, objects move continuously. If the FPS (Frame Per Second) 
 
 In other words, for a large change to occur, small changes must precede it. This means that if the pixel value at time t is $f(y,x,t)$, then $f(y, x, t+1)$ is likely to be the same or very similar. If the values are the same, it can be inferred that there was no movement. By utilizing this feature, basic segmentation can be performed. The difference between two images can be used to extract only the objects with large changes. This temporal consistency becomes a very important clue in Optical Flow. Figure 2 is a concept figure of time coherence.
 
-<p align="center"><img src="/assets/images/posts/time_coherence.jpeg"></p>
+<p align="center">
+  <img src="/assets/images/posts/time_coherence.jpeg" alt>
+  <em>Time Coherence</em>
+</p>
 
 ## Conclusion
 
