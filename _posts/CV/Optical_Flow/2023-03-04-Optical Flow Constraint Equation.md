@@ -65,6 +65,7 @@ $$I(y,x,t)=I(y+dy,x+dx,t+dt)\Rightarrow A$$
 If we apply Taylor series (expansion) to the right-hand side of the equation, we get the B equation as follows.
 
 $$I(y+dy,x+dx,t+dt)=I(y,x,t)+\frac{\partial I}{\partial y}dy+\frac{\partial I}{\partial x}dx+\frac{\partial I}{\partial t}dt+\cdots \Rightarrow B$$
+
 The omitted terms are second-order or higher-order terms. As these terms have a significantly smaller impact than the first-order term when $dy$ and $dx$ are sufficiently small due to the second assumption, Small Motion, and the time interval between two consecutive frames, $dt$, is sufficiently small, we can omit them completely.
 
 However, it is not possible to define the exact value of a sufficiently small time interval, $dt$. It is a value that allows $dy$ and $dx$ to remain sufficiently small. Typically, if the movement of an object can be captured within a few pixels, it is considered a sufficiently small value. Therefore, what is important is not just the time interval, but also the amount of movement during that time interval.
