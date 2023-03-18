@@ -96,7 +96,7 @@ Finally, we learned a way to calculate Optical Flow. However, the Lucas-Kanade M
 The part that may be difficult to understand in the cons is probably when there are movements larger than the window. Since it is based on value tracking, Isn't it okay even if the movement is large? The problem is that window-based algorithms do not consider outside the window. Therefore, aliasing occurs in this case, resulting in distortion as shown below.
 
 <p align="center">
-  <img src="/assets/images/posts/aliasing_LK.jpeg" width="100%" height="100%" alt>
+  <img src="/assets/images/posts/aliasing_LK.png" width="100%" height="100%" alt>
   <em>Aliasing by Big Motion in Lucas-Kanade Algorithm</em>
 </p>
 
